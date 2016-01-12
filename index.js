@@ -8,7 +8,7 @@ const server   = new Hapi.Server();
 const Master   = require( './master' );
 const master   = new Master();
 const mongoose = require( 'mongoose' );
-const config = require( './config' );
+const config   = require( './config' );
 mongoose.connect( config.mongodb );
 require( './models/Tests' );
 

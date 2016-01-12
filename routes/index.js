@@ -1,13 +1,13 @@
 'use strict';
 
 const _         = require( 'lodash' );
-const config    = require( './config' );
+const config    = require( '../config' );
 const mongoose  = require( 'mongoose' );
 const glob      = require( 'glob' );
 const Test      = mongoose.models.Test;
 
 const testCases = [];
-glob( './test-cases/*', function ( err, files ) {
+glob( process.cwd() + '/test-cases/*', function ( err, files ) {
 	files.forEach( function ( file ) {
 		let fileName = file.split( '/' );
 		let data = {
