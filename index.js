@@ -9,6 +9,9 @@ const Master   = require( './master' );
 const master   = new Master();
 const mongoose = require( 'mongoose' );
 const config   = require( './config' );
+
+const protractorConfig = require( 'protractor-config' );
+
 mongoose.connect( config.mongodb );
 require( './models/Tests' );
 
@@ -95,7 +98,7 @@ io.sockets.on( 'connection', ( socket ) => {
 	socket.on( 'register-browserstack', ( data ) => {
 		socket.join( 'browserstack-slave' );
 		var browserstack = JSON.parse( data.browserstack );
-		var machine = _.findWhere( config.multiCapabilities, {
+		var machine = _.findWhere( protractorConfig.multiCapabilities, {
 			'browserName' : browserstack.automation_session.browser,
 			'os'          : browserstack.automation_session.os,
 			'os_version'  : browserstack.automation_session.os_version

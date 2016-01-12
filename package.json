@@ -14,7 +14,8 @@
     "mongoose": "^4.3.1",
     "socket.io": "^1.3.7",
     "uuid": "^2.0.1",
-   "test-protocol": "git+https://github.com/yamii/test-protocol"
+   "test-protocol": "git+https://github.com/yamii/test-protocol",
+   "protractor-config": "git+https://github.com/yamii/protractor-config"
   },
   "devDependencies": {},
   "scripts": {
