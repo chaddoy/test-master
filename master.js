@@ -6,8 +6,9 @@ const EventEmitter = require( 'events' );
 const util         = require( 'util' );
 const _            = require( 'lodash' );
 
-const read           = require( './reader' ).read;
-const transformWrite = require( './reader' ).write;
+const testProtocol   = require( 'test-protocol' );
+const read           = testProtocol.read;
+const transformWrite = testProtocol.write;
 
 function debug () {
 	console.log.apply( null, Array.prototype.slice.call( arguments ) );
