@@ -123,7 +123,7 @@ module.exports = function ( master ) {
 
 				let id = request.params.testCaseId || 'TC-20.json';
 				let command = {
-					'shell'     : 'runner-local.sh',
+					'shell'     : 'runner-local',
 					'arguments' : [ id, escape( JSON.stringify( env ) ) ]
 				};
 
