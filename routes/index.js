@@ -8,6 +8,19 @@ const Test             = mongoose.models.Test;
 
 // Test Cases
 const testCases = [];
+const logFiles  = [];
+
+glob( process.cwd() + '/testlogs/*', function ( err, files ) {
+	files.forEach( function ( file ) {
+		let fileName = file.split( '/' );
+		let data = {
+			'filename' : fileName[ fileName.length - 1 ],
+			'file'     : file
+		};
+		logFiles.push( data );
+	} );
+} );
+
 glob( process.cwd() + '/test-cases/*', function ( err, files ) {
 	files.forEach( function ( file ) {
 		let fileName = file.split( '/' );
@@ -37,6 +50,19 @@ module.exports = function ( master ) {
 				let jsonfilename = _.findWhere( testCases, { 'filename' : id } );
 				let json         = require( jsonfilename.file );
 				return reply( json );
+			}
+		},
+		{
+			'method' : 'GET',
+			'path' : '/logs/{logId}',
+			'handler' : function ( request, reply ) {
+				let logFilename = _.findWhere( logFiles, { 'filename' : request.params.logId } );
+				fs.readFile( logFilename.file, 'utf8', function ( err, data ) {
+					if ( err ) {
+						return console.log( err );
+					}
+					return reply( data );
+				} );
 			}
 		},
 		{
