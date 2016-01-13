@@ -183,7 +183,7 @@ module.exports = function ( master ) {
 			'handler' : function ( request, reply ) {
 
 				let payload           = request.payload;
-				let browserStack      = JSON.parse( payload.browserstack );
+				let browserStack      = payload.browserstack;
 				let automationSession = browserStack.automation_session;
 				let spec              = payload.spec;
 				let success           = 1;

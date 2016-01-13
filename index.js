@@ -100,7 +100,7 @@ io.sockets.on( 'connection', ( socket ) => {
 
 	socket.on( 'register-browserstack', ( data ) => {
 		socket.join( 'browserstack-slave' );
-		var browserstack = JSON.parse( data.browserstack );
+		var browserstack = data.browserstack;
 		var machine = _.findWhere( protractorConfig.multiCapabilities, {
 			'browserName' : browserstack.automation_session.browser,
 			'os'          : browserstack.automation_session.os,
