@@ -6,6 +6,7 @@ const mongoose  = require( 'mongoose' );
 const glob      = require( 'glob' );
 const Test      = mongoose.models.Test;
 
+// Test Cases
 const testCases = [];
 glob( process.cwd() + '/test-cases/*', function ( err, files ) {
 	files.forEach( function ( file ) {
@@ -26,6 +27,16 @@ module.exports = function ( master ) {
 			'path' : '/test-cases',
 			'handler' : function ( request, reply ) {
 				return reply( testCases );
+			}
+		},
+		{
+			'method' : 'GET',
+			'path' : '/test-cases/{testCaseId}',
+			'handler' : function ( request, reply ) {
+				let id           = request.params.testCaseId || 'TC-20.json';
+				let jsonfilename = _.findWhere( testCases, { 'filename' : id } );
+				let json         = require( jsonfilename.file );
+				return reply( json );
 			}
 		},
 		{
@@ -80,14 +91,10 @@ module.exports = function ( master ) {
 				};
 
 				let id = request.params.testCaseId || 'TC-20.json';
-				let jsonfilename = _.findWhere( testCases, { 'filename' : id } );
-				let json = require( jsonfilename.file );
 				let command = {
 					'shell'     : './runner.sh',
-					'arguments' : [ escape( JSON.stringify( json ) ), id ]
+					'arguments' : [ id ]
 				};
-
-				console.log( command );
 
 				master.exec( machine, command, function ( error, data ) {
 					if ( error ) {
