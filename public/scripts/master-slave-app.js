@@ -49,9 +49,12 @@ var SlaveContainer = React.createClass( {
 	},
 
 	'_handleClick' : function ( e ) {
-		let select = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
+		let select   = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
 		let selected = select.options[ select.selectedIndex ].value;
-		$.get( 'http://localhost:3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + selected, function () {
+		let username = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
+		let password = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
+
+		$.get( 'http://localhost:3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + selected + '?username=' + username + '&password=' + password, function () {
 			console.log( 'sucess' );
 		} );
 	},
@@ -69,6 +72,8 @@ var SlaveContainer = React.createClass( {
 		return (
 			<div className="col-xs-12">
 				<h3>{ this.props.slave.platform }-{ this.props.slave.id }</h3>
+				<input type="text" className="form-control" value="glenny" />
+				<input type="text" className="form-control" value="edivate" />
 				<button type="button" className="btn btn-primary" onClick={ this._runAll }>Run All</button>
 				<button type="button" className="btn btn-primary" onClick={ this._handleClick }>Run</button>
 				<select>

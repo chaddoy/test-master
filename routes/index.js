@@ -116,10 +116,15 @@ module.exports = function ( master ) {
 					'machine'  : request.params.machine
 				};
 
+				let env = {
+					'username' : request.query.username,
+					'password' : request.query.password,
+				};
+
 				let id = request.params.testCaseId || 'TC-20.json';
 				let command = {
 					'shell'     : 'runner-local.sh',
-					'arguments' : [ id ]
+					'arguments' : [ id, escape( JSON.stringify( env ) ) ]
 				};
 
 				master.exec( machine, command, function ( error, data ) {
