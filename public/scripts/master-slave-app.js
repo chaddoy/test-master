@@ -72,8 +72,8 @@ var SlaveContainer = React.createClass( {
 		return (
 			<div className="col-xs-12">
 				<h3>{ this.props.slave.platform }-{ this.props.slave.id }</h3>
-				<input type="text" className="form-control" value="glenny" />
-				<input type="text" className="form-control" value="edivate" />
+				<input type="text" className="form-control" placeholder="Username" />
+				<input type="text" className="form-control" placeholder="Password" />
 				<button type="button" className="btn btn-primary" onClick={ this._runAll }>Run All</button>
 				<button type="button" className="btn btn-primary" onClick={ this._handleClick }>Run</button>
 				<select>
