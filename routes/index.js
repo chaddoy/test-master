@@ -1,10 +1,10 @@
 'use strict';
 
-const _         = require( 'lodash' );
-const config    = require( '../config' );
-const mongoose  = require( 'mongoose' );
-const glob      = require( 'glob' );
-const Test      = mongoose.models.Test;
+const _                = require( 'lodash' );
+const mongoose         = require( 'mongoose' );
+const glob             = require( 'glob' );
+const protractorConfig = require( 'protractor-config' );
+const Test             = mongoose.models.Test;
 
 // Test Cases
 const testCases = [];
@@ -14,7 +14,7 @@ glob( process.cwd() + '/test-cases/*', function ( err, files ) {
 		let data = {
 			'filename' : fileName[ fileName.length - 1 ],
 			'file'     : file
-		}
+		};
 		testCases.push( data );
 	} );
 } );
@@ -62,7 +62,7 @@ module.exports = function ( master ) {
 
 						for( let i = 0; i < results.length; i++ ) {
 							let stats = results[ i ];
-							let machine = _.findWhere( config.multiCapabilities, {
+							let machine = _.findWhere( protractorConfig.multiCapabilities, {
 								'id' : stats._id
 							} );
 							machine.stats = results[ i ];
@@ -77,7 +77,7 @@ module.exports = function ( master ) {
 			'method' : 'GET',
 			'path' : '/machines/{machineId}',
 			'handler' : function ( request, reply ) {
-				return reply( _.findWhere( config.multiCapabilities, { 'id' : parseInt( request.params.machineId ) } ) );
+				return reply( _.findWhere( protractorConfig.multiCapabilities, { 'id' : parseInt( request.params.machineId ) } ) );
 			}
 		},
 		{
@@ -163,7 +163,7 @@ module.exports = function ( master ) {
 					fail    = 1;
 				}
 
-				var machine = _.findWhere( config.multiCapabilities, {
+				var machine = _.findWhere( protractorConfig.multiCapabilities, {
 					'browserName' : automationSession.browser,
 					'os'          : automationSession.os,
 					'os_version'  : automationSession.os_version
