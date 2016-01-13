@@ -112,6 +112,7 @@ io.sockets.on( 'connection', ( socket ) => {
 	// Check what happened here
 	socket.on( 'browserstack-stream', ( data ) => {
 		_.forEach( io.sockets.connected, ( socketEach, socketId ) => {
+			socket.writeStream.write( data.data[ 0 ] );
 			socketEach.emit( 'browserstack-data-stream', {
 				'machineId' : socket.browserstackMachineId,
 				'data'      : data.data[ 0 ]
