@@ -92,7 +92,7 @@ module.exports = function ( master ) {
 
 				let id = request.params.testCaseId || 'TC-20.json';
 				let command = {
-					'shell'     : 'runner.sh',
+					'shell'     : 'runner-local.sh',
 					'arguments' : [ id ]
 				};
 

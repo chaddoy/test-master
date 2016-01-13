@@ -17,6 +17,9 @@ require( './models/Tests' );
 
 // Start the master to listen
 master.on( 'listening', ( masterServer ) => {} );
+master.on( 'error', ( error ) => {
+	console.log( error );
+} );
 
 server.connection( {
 	'port' : 3400,
