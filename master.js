@@ -83,7 +83,7 @@ Master.prototype.IAM = function ( socket, meta ) {
 	let slaveMeta   = JSON.parse( meta[ 1 ] );
 	let platform    = slaveMeta.platform;
 
-	socket.id       = [ socket.remoteAddress, socket.remotePort ].join( ':' );
+	socket.id       = slaveMeta.id;
 	socket.platform = slaveMeta.platform;
 
 	if( !this.slaves[ platform ] ) {
