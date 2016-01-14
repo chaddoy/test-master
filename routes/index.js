@@ -209,7 +209,8 @@ module.exports = function ( master ) {
 					'failCount'       : spec.failedSpecs,
 					'success'         : success,
 					'fail'            : fail,
-					'endTime'         : spec.endTime
+					'endTime'         : spec.endTime,
+					'duration'        : spec.duration
 				};
 
 				let test = new Test( data );

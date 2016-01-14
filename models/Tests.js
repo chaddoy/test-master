@@ -12,7 +12,8 @@ var TestsModelSchema = new Schema( {
 	'failCount'       : Number,
 	'success'         : Number,
 	'fail'            : Number,
-	'endTime'         : Date
+	'endTime'         : Date,
+	'duration'        : String
 } );
 
 mongoose.models.Test = mongoose.model( 'Test', TestsModelSchema );
