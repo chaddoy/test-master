@@ -68,6 +68,11 @@ function Master ( options ) {
 		socket.on( 'end', function () {
 			debug( 'Ended connection' );
 		} );
+
+		socket.on( 'error', ( error ) => {
+			console.error( error );
+			console.error( 'ERROR in -', socket.platform, ':', socket.id );
+		} );
 	} );
 
 	this.server.listen( options.port, () => {
