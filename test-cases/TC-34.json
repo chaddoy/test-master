@@ -1,0 +1,150 @@
+{
+    "scenarioId": "TC-34",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-34-NWS Evaluation Protocol '12-'13",
+        "groups": [{
+            "name": "EVALUATION PROTOCOL",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Pre/Post - (Un)Announced",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Pre"
+                }, {
+                    "type": 2,
+                    "optionText": "Post"
+                }, {
+                    "type": 2,
+                    "optionText": "Announced"
+                }, {
+                    "type": 2,
+                    "optionText": "Unannounced"
+                }, {
+                    "type": 2,
+                    "optionText": "Walkthrough"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Classroom Culture (Teachers create a classroom environment that fosters a climate of urgency and expectations around achievement and excellence and respect) - Check if Observed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Displays high expectations for students"
+                }, {
+                    "type": 2,
+                    "optionText": "Recognizes individual efforts"
+                }, {
+                    "type": 2,
+                    "optionText": "Safe, well-organized learning environment"
+                }, {
+                    "type": 2,
+                    "optionText": "Open communications is evident between students and teacher"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher treats students fairly and consistently"
+                }, {
+                    "type": 2,
+                    "optionText": "Mutual respect is displayed in the classroom"
+                }, {
+                    "type": 2,
+                    "optionText": "Maximization of instruction time"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Purposeful Planning (Teachers use content areas standards to develop a rigorous curriculum relevant for all students; building meaningful units of study, continuous assessment and a system for tracing students progress as well as plans for accommodations and changes in response to a lack of student progress) - Check if Observed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Student achievement goals are evident"
+                }, {
+                    "type": 2,
+                    "optionText": "Evidence of knowledge of subject areas"
+                }, {
+                    "type": 2,
+                    "optionText": "Daily lesson plans.  Lesson plans can be made available to the administration."
+                }, {
+                    "type": 2,
+                    "optionText": "Meaningful assignments that engages students, connects activities and assessment to student understanding, and allocates instructionally appropriate time for learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective lesson plans for substitute teachers"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Effective Instruction (Teacher facilititates student academic practice so that all students are participating and have the opportunity to gain mastery of the objectives) - Check if Observed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ties instruction to the objectives and the end results of the lesson"
+                }, {
+                    "type": 2,
+                    "optionText": "Students understand the purpose of lesson and are actively engaged"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates effective instructional pacing"
+                }, {
+                    "type": 2,
+                    "optionText": "Delivers content in a factually correct, well-organized, and challenging manner"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates a high quality of questioning techniques"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher differentiates delivery of instruction based on assessment data"
+                }, {
+                    "type": 2,
+                    "optionText": "Checks for understanding of content at key moments of lesson"
+                }, {
+                    "type": 2,
+                    "optionText": "Re-teaches, modifies long-term plans, and modifies practice as appropriate"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses a variety of instructional strategies to encourage students’ development of critical thinking, problem solving and performance skills."
+                }, {
+                    "type": 2,
+                    "optionText": "Integrates technology with instruction to maximize student learning and encourage engagement in higher level thinking skills"
+                }, {
+                    "type": 2,
+                    "optionText": "Provides a variety of grouping patterns when appropriate"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Assessment (Teacher uses formal and informal assessment strategies to evaluate and ensure the continuous intellectual, social and physical development of learner.) - Check if Observed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Records student progress data, analyzes student progress toward mastery, and communicates progress to students"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses information gained from assessments to improve teaching practice and student learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Provides a variety of assessments"
+                }, {
+                    "type": 2,
+                    "optionText": "Teaches students to use assessment feedback to guide their own learning"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Professional Leadership (Teacher develops and sustains the intense energy and leadership within their school community to ensure the achievement of all students) - Check if Observed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Contributes significant ideas, expertise, and time"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates a high regard for others, collaborates with colleagues to make the school community successful"
+                }, {
+                    "type": 2,
+                    "optionText": "Pursues opportunities to  improve knowledge and practices, welcomes constructive feedback to improve practice, actively participates in professional development and the school improvement process"
+                }, {
+                    "type": 2,
+                    "optionText": "Attempts to remedy obstacles in student achievement to facilitate student success"
+                }, {
+                    "type": 2,
+                    "optionText": "Strives to develop positive relationships with students and parents, attends conferences and meetings, responds to parents in a timely manner"
+                }, {
+                    "type": 2,
+                    "optionText": "Remains abreast of current educational research about student learning and/or utilizes innovative resources"
+                }]
+            }]
+        }]
+    }
+}

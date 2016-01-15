@@ -1,0 +1,21 @@
+{
+    "scenarioId": "TC-119",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-119-Walk Through: Observation Data 12-13",
+        "groups": [{
+            "name": "Walk Through",
+            "indicators": [{
+                "type": 1,
+                "questionText": "Student Engagement"
+            }, {
+                "type": 1,
+                "questionText": "Lesson Presentation"
+            }, {
+                "type": 1,
+                "questionText": "Room Environment"
+            }]
+        }]
+    }
+}

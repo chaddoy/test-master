@@ -1,0 +1,252 @@
+{
+    "scenarioId": "TC-111",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-111-Marshall-Monitoring, Assessment, and Follow-Up",
+        "groups": [{
+            "name": "Monitoring, Assessment, and Follow-Up",
+            "indicators": [{
+                "type": 4,
+                "questionText": "Criteria",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Diagnosis",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "On-the-Spot",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Self-Assessment",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Recognition",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Interims",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Tenacity",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Support",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Improvement Necessary"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Analysis",
+                "answerOptions": [{
+                    "type": 2,
+                     "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Needs Improvement"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }, {
+                "type": 4,
+                "questionText": "Reflection",
+                "answerOptions": [{
+                    "type": 2,
+                    "description": "Rubric sample desciprion number 0N3",
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number TW0",
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number THR33",
+                    "optionText": "Needs Improvement"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F0UR",
+                    "optionText": "Does Not Meet Standards"
+                }, {
+                    "type": 2,
+                    "description": "Rubric sample desciprion number F!V3",
+                    "optionText": "Not Applicable/Not Observed"
+                }]
+            }]
+        }]
+    }
+}

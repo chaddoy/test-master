@@ -1,0 +1,355 @@
+{
+    "scenarioId": "TC-39",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-39-Teacher Observation Rubric",
+        "groups": [{
+            "name": "Domain 1: Planning and Preparation",
+            "indicators": [{
+                "type": 2,
+                "questionText": "A: Demonstrating knowledge of content and pedagogy",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 5,
+                "questionText": "Knowledge of Content and Pedagogy"
+            }, {
+                "type": 2,
+                "questionText": "B: Designing Coherent Instruction",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "C: Setting Instructional Outcomes",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "D: Demonstrating knowledge of resources",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 5,
+                "questionText": "Knowledge of Students"
+            }, {
+                "type": 2,
+                "questionText": "E: Demonstrating knowledge of students",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "F: Designing student assessment",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }]
+        }, {
+            "name": "Domain 2: Creating an Environment for Learning",
+            "indicators": [{
+                "type": 5,
+                "questionText": "Creating an Environment of Respect and Rapport"
+            }, {
+                "type": 2,
+                "questionText": "A: Creating an environment of respect and rapport",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "B: Organizing Physical Space",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 5,
+                "questionText": "Establishing a Culture of Learning"
+            }, {
+                "type": 2,
+                "questionText": "C: Establishing a culture for learning",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "D: Managing Classroom Procedures",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "E: Managing Student Behavior",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 5,
+                "questionText": "Managing Classroom Procedures"
+            }, {
+                "type": 5,
+                "questionText": "Managing Student Behavior"
+            }]
+        }, {
+            "name": "Domain 3: Teaching for Learning",
+            "indicators": [{
+                "type": 5,
+                "questionText": "Communicates Clearly and Accurately"
+            }, {
+                "type": 2,
+                "questionText": "A: Communicating with Students",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 5,
+                "questionText": "Uses Questioning and Discussion Techniques"
+            }, {
+                "type": 2,
+                "questionText": "B: Using questioning and discussion techniques",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 5,
+                "questionText": "Engaging Student Learning"
+            }, {
+                "type": 2,
+                "questionText": "C: Engaging students in learning",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "D: Assessment in Instruction",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "E: Demonstrating flexibility and responsiveness",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Ineffective"
+                }, {
+                    "type": 2,
+                    "optionText": "Minimally Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Highly Effective"
+                }, {
+                    "type": 2,
+                    "optionText": "Exemplary"
+                }]
+            }]
+        }, {
+            "name": "Comments",
+            "indicators": [{
+                "type": 1,
+                "questionText": "WOW"
+            }, {
+                "type": 1,
+                "questionText": "WONDER"
+            }]
+        }]
+    }
+}

@@ -1,0 +1,192 @@
+{
+    "scenarioId": "TC-07",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-07-Copy of JMC Learning Walk",
+        "groups": [{
+            "name": "Page 1",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Lesson Component",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Activating Strategy"
+                }, {
+                    "type": 2,
+                    "optionText": "Teaching Strategy"
+                }, {
+                    "type": 2,
+                    "optionText": "Summarizing Strategy"
+                }]
+            }, {
+                "type": 1,
+                "questionText": "Essential Question"
+            }, {
+                "type": 3,
+                "questionText": "Planning and Preparation: Essential Question",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "posted"
+                }, {
+                    "type": 2,
+                    "optionText": "guiding instruction"
+                }, {
+                    "type": 2,
+                    "optionText": "connected to content"
+                }, {
+                    "type": 2,
+                    "optionText": "communicated to students"
+                }, {
+                    "type": 2,
+                    "optionText": "connected to prior and future learning"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Planning and Preparation: Student Learning Map",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "posted"
+                }, {
+                    "type": 2,
+                    "optionText": "standards-based"
+                }, {
+                    "type": 2,
+                    "optionText": "students make connection to student learning map"
+                }, {
+                    "type": 2,
+                    "optionText": "evidence of PLC alignment"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Classroom Environment: Managing Classroom Procedures",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Students are engaged in learning"
+                }, {
+                    "type": 2,
+                    "optionText": "rules and procedures are designed and enforced"
+                }, {
+                    "type": 2,
+                    "optionText": "teacher effectively uses instructional time"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Classroom Environment: Managing Student Behavior",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Class rules are clear"
+                }, {
+                    "type": 2,
+                    "optionText": "teacher effectively monitors students"
+                }, {
+                    "type": 2,
+                    "optionText": "teacher response to behavior is appropriate"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Classroom Environment: Culture for Learning",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Teacher-Student interactions are appropriate"
+                }, {
+                    "type": 2,
+                    "optionText": "Mutual respect is demonstrated"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher demonstrates enthusiasm"
+                }, {
+                    "type": 2,
+                    "optionText": "Instructional outcomes demonstrate high expectations"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Classroom Environment: Physical Space",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "classroom is safe and accessible"
+                }, {
+                    "type": 2,
+                    "optionText": "[FILLER]"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instruction: Engaging Students",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "activities and assignments are appropriate for all learners"
+                }, {
+                    "type": 2,
+                    "optionText": "Instructional groups are productive"
+                }, {
+                    "type": 2,
+                    "optionText": "Materials are suitable for students and support instructional goals"
+                }, {
+                    "type": 2,
+                    "optionText": "Lesson has structure and pacing is appropriate"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instruction: Flexibility and Responsiveness",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Teacher makes adjustments to lesson when necessary"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher uses a variety of approaches for struggling students"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher accommodates student questions and interests"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instruction: Communication",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Purpose is clearly communicated and directions are clear"
+                }, {
+                    "type": 2,
+                    "optionText": "Explanation of content is clear and connects with students' knowledge and experience"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instruction: Questioning",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Questioning is higher order"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher facilitates discussion among students"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher engages all students in class discussion"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instruction: Assessment",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "N/A"
+                }, {
+                    "type": 2,
+                    "optionText": "Students are aware of criteria for evaluation"
+                }, {
+                    "type": 2,
+                    "optionText": "Students assess and monitor the quality of their own work against assessment criteria"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher monitors the progress of students"
+                }, {
+                    "type": 2,
+                    "optionText": "Feedback to students is timely and of high quality"
+                }]
+            }, {
+                "type": 1,
+                "questionText": "Questions and/or Comments"
+            }]
+        }, {
+            "name": "Page 2",
+            "indicators": []
+        }]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "scenarioId": "TC-18",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-18-Teacher location and student engagement",
+        "groups": [{
+            "name": "Standard Section",
+            "indicators": [{
+                "type": 1,
+                "questionText": "How many students are present in the classroom?"
+            }, {
+                "type": 1,
+                "questionText": "How many students are working on the subject of the classroom?"
+            }, {
+                "type": 1,
+                "questionText": "What are the off task behaviors?"
+            }, {
+                "type": 1,
+                "questionText": "Comments"
+            }]
+        }]
+    }
+}

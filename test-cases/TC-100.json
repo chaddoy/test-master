@@ -1,0 +1,12 @@
+{
+    "scenarioId": "TC-100",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-100-Untitled Observation Template",
+        "groups": [{
+            "name": "Standard Section",
+            "indicators": []
+        }]
+    }
+}

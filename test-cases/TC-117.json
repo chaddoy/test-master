@@ -1,0 +1,90 @@
+{
+    "scenarioId": "TC-117",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-117-Copy of VA-Teacher Summative Performance Report (weighted)",
+        "groups": [{
+            "name": "General Information",
+            "indicators": [{
+                "type": 1,
+                "questionText": "Contract Status"
+            }, {
+                "type": 3,
+                "questionText": "Documentation Reviewed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Teacher Documentation Log"
+                }, {
+                    "type": 2,
+                    "optionText": "Goal Setting Form"
+                }, {
+                    "type": 2,
+                    "optionText": "Observation Form"
+                }, {
+                    "type": 2,
+                    "optionText": "Other"
+                }]
+            }]
+        }, {
+            "name": "Performance Standard 1: Professional Knowledge – 10%",
+            "indicators": []
+        }, {
+            "name": "Performance Standard 2: Instructional Planning – 10%",
+            "indicators": []
+        }, {
+            "name": "Performance Standard 3: Instructional Delivery- 10%",
+            "indicators": []
+        }, {
+            "name": "Performance Standard 4: Assessment of and for Student Learning – 10%",
+            "indicators": []
+        }, {
+            "name": "Performance Standard 5: Learning Environment – 10%",
+            "indicators": []
+        }, {
+            "name": "Performance Standard 6: Professionalism – 10%",
+            "indicators": []
+        }, {
+            "name": "Performance Standard 7: Student Academic Progress – 40%",
+            "indicators": []
+        }, {
+            "name": "Summary",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Evaluation Summary",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Recommended for continued employment."
+                }, {
+                    "type": 2,
+                    "optionText": "Recommended for placement on a Performance Improvement Plan. (One or more standardsare Unacceptable, or two or more standards are Developing/Needs Improvement.)"
+                }, {
+                    "type": 2,
+                    "optionText": "Recommended for Dismissal/Non-renewal. (The teacher has failed to make progress on aPerformance Improvement Plan, or the teacher consistently performs below the establishedstandards, or in a manner that is inconsistent with the school’s mission and goals.)"
+                }]
+            }, {
+                "type": 1,
+                "questionText": "Commendations"
+            }, {
+                "type": 1,
+                "questionText": "Areas Noted for Improvement"
+            }, {
+                "type": 1,
+                "questionText": "Teacher Improvement Goals"
+            }, {
+                "type": 2,
+                "questionText": "Overall Evaluation Summary Criteria",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "ACCEPTABLE"
+                }, {
+                    "type": 2,
+                    "optionText": "UNACCEPTABLE (Due to three or more Developing/NeedsImprovement or one or more Unacceptableratings on performance standards)"
+                }]
+            }, {
+                "type": 1,
+                "questionText": "Performance Rating"
+            }]
+        }]
+    }
+}

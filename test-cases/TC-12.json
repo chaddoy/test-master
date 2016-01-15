@@ -1,0 +1,34 @@
+{
+    "scenarioId": "TC-12",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-12-Walkthrough 2012-2013",
+        "groups": [{
+            "name": "2012-2013 Walkthrough",
+            "indicators": [{
+                "type": 1,
+                "questionText": "What off task behaviors were observed?"
+            }, {
+                "type": 3,
+                "questionText": "Is there evidence of:",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "praise"
+                }, {
+                    "type": 2,
+                    "optionText": "redirection of behavior"
+                }, {
+                    "type": 2,
+                    "optionText": "verbal encouragement"
+                }, {
+                    "type": 2,
+                    "optionText": "reinforcement through reward"
+                }, {
+                    "type": 2,
+                    "optionText": "private discussion regarding student behavior or progress"
+                }]
+            }]
+        }]
+    }
+}

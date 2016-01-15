@@ -1,0 +1,21 @@
+{
+    "scenarioId": "TC-107",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-107-October SLANT Tynes",
+        "groups": [{
+            "name": "Student Engagement",
+            "indicators": [{
+                "type": 1,
+                "questionText": "How many students are in the class?"
+            }, {
+                "type": 1,
+                "questionText": "Additional notes - list below."
+            }, {
+                "type": 1,
+                "questionText": "How many students are engaged (see SLANT rubric below)?"
+            }]
+        }]
+    }
+}

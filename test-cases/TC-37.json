@@ -1,0 +1,196 @@
+{
+    "scenarioId": "TC-37",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-37-Copy of BHS Walk Through",
+        "groups": [{
+            "name": "BHS Walk Through",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Standards & Objectives",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Objectives Posted"
+                }, {
+                    "type": 2,
+                    "optionText": "Objectives Aligned"
+                }, {
+                    "type": 2,
+                    "optionText": "Objectives Communicated"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Teacher Behavior",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Seated"
+                }, {
+                    "type": 2,
+                    "optionText": "Standing"
+                }, {
+                    "type": 2,
+                    "optionText": "Walking"
+                }, {
+                    "type": 2,
+                    "optionText": "Lacking control"
+                }, {
+                    "type": 2,
+                    "optionText": "Organized"
+                }, {
+                    "type": 2,
+                    "optionText": "Unorganized"
+                }, {
+                    "type": 2,
+                    "optionText": "In control"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Teacher Communication Skills",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Good"
+                }, {
+                    "type": 2,
+                    "optionText": "Satisfactory"
+                }, {
+                    "type": 2,
+                    "optionText": "Poor"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Teacher Activity",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Leading discussion"
+                }, {
+                    "type": 2,
+                    "optionText": "Lecturing"
+                }, {
+                    "type": 2,
+                    "optionText": "Monitoring"
+                }, {
+                    "type": 2,
+                    "optionText": "Reading"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrating"
+                }, {
+                    "type": 2,
+                    "optionText": "Modeling"
+                }, {
+                    "type": 2,
+                    "optionText": "Inactivity"
+                }, {
+                    "type": 2,
+                    "optionText": "Projector"
+                }, {
+                    "type": 2,
+                    "optionText": "Leading centers"
+                }, {
+                    "type": 2,
+                    "optionText": "At desk alone"
+                }, {
+                    "type": 2,
+                    "optionText": "Computer"
+                }, {
+                    "type": 2,
+                    "optionText": "Board"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Student Behavior",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Writing"
+                }, {
+                    "type": 2,
+                    "optionText": "Reading"
+                }, {
+                    "type": 2,
+                    "optionText": "Listening"
+                }, {
+                    "type": 2,
+                    "optionText": "Cooperative learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Discussing"
+                }, {
+                    "type": 2,
+                    "optionText": "Performing"
+                }, {
+                    "type": 2,
+                    "optionText": "Experimenting"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Room Condition",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Organized"
+                }, {
+                    "type": 2,
+                    "optionText": "Well decorated"
+                }, {
+                    "type": 2,
+                    "optionText": "Cluttered"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Evidence of Differentiation (Explain in Comments Section below)",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "No"
+                }, {
+                    "type": 2,
+                    "optionText": "Yes"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Evidence of Standardized Test Practice",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "EOC"
+                }, {
+                    "type": 2,
+                    "optionText": "ACT"
+                }, {
+                    "type": 2,
+                    "optionText": "Writing Assessment"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Odd",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "1"
+                }, {
+                    "type": 2,
+                    "optionText": "2"
+                }, {
+                    "type": 2,
+                    "optionText": "3"
+                }, {
+                    "type": 2,
+                    "optionText": "4"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Even",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "1"
+                }, {
+                    "type": 2,
+                    "optionText": "2"
+                }, {
+                    "type": 2,
+                    "optionText": "3"
+                }, {
+                    "type": 2,
+                    "optionText": "4"
+                }]
+            }]
+        }]
+    }
+}

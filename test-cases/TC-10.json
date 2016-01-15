@@ -1,0 +1,122 @@
+{
+    "scenarioId": "TC-10",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-10-Copy of RM 5 Minute Observation",
+        "groups": [{
+            "name": "Page 1",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Physical arrangement allows students and teachers to see and hear all parts of the lesson.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Students receiving group instruction are attentive and engaged.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Teacher follows the script as written.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Teacher corrects when students make errors.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Teacher is relying on positive techniques to manage student behavior.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Students doing independent work are on-task.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Independent work is corrected and students have done fix-ups.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Student work is neat and well organized.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Teacher and student materials are organized and accessible.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Written records of student performance are posted or accessible.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Thermometer charts are posted and implemented correctly.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }]
+        }]
+    }
+}

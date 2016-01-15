@@ -1,0 +1,78 @@
+{
+        "scenarioId": "TC-103",
+        "scenario": "create-template",
+        "scenarioType": "success",
+        "data": {
+                "name": "TC-103-Test Template",
+                "groups": [{
+                        "name": "Page 1",
+                        "indicators": [{
+                                "type": 2,
+                                "questionText": "Was teacher available to observe?",
+                                "answerOptions": [{
+                                        "type": 2,
+                                        "optionText": "Yes"
+                                }, {
+                                        "type": 2,
+                                        "optionText": "No"
+                                }]
+                        }, {
+                                "type": 2,
+                                "questionText": "Did teacher talk to student before class?",
+                                "answerOptions": [{
+                                        "type": 2,
+                                        "optionText": "Yes"
+                                }, {
+                                        "type": 2,
+                                        "optionText": "No"
+                                }]
+                        }, {
+                                "type": 4,
+                                "questionText": "What are you goals for the quarter?",
+                                "answerOptions": [{
+                                        "type": 2,
+                                        "description": "Rubric samle description 1",
+                                        "optionText": "20%"
+                                }, {
+                                        "type": 2,
+                                        "description": "Rubric samle description 2",
+                                        "optionText": "40%"
+                                }]
+                        }, {
+                                "type": 3,
+                                "questionText": "Teacher spent most of the time at their desk? Please check all that reply.",
+                                "answerOptions": [{
+                                        "subOptions": [{
+                                                "type": 2,
+                                                "optionText": "Exceeded goals"
+                                        }, {
+                                                "type": 2,
+                                                "optionText": "[FILLER]"
+                                        }],
+                                        "type": 2,
+                                        "optionText": "None of the time"
+                                }, {
+                                        "subOptions": [{
+                                                "type": 2,
+                                                "optionText": "Goals met"
+                                        }, {
+                                                "type": 2,
+                                                "optionText": "[FILLER]"
+                                        }],
+                                        "type": 2,
+                                        "optionText": "Some of the time"
+                                }, {
+                                        "subOptions": [{
+                                                "type": 2,
+                                                "optionText": "Goals are not met"
+                                        }, {
+                                                "type": 2,
+                                                "optionText": "[FILLER]"
+                                        }],
+                                        "type": 2,
+                                        "optionText": "Most of the time"
+                                }]
+                        }]
+                }]
+        }
+}

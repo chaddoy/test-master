@@ -1,0 +1,199 @@
+{
+    "scenarioId": "TC-109",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-109-Interim Performance Report",
+        "groups": [{
+            "name": "Standards",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Professional Knowledge",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Effectively addresses appropriate curriculum standards"
+                }, {
+                    "type": 2,
+                    "optionText": "Integrates key content elements and facilitates students’ use of higher level thinking skills in instruction"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates ability to link present content with past and future learning experiences, other subject areas, and real world experiences and applications"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates an accurate knowledge of the subject area(s) taught"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates skills relevant to the subject area(s) taught"
+                }, {
+                    "type": 2,
+                    "optionText": "Bases instruction on goals that reflect high expectations and an understanding of the subject"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates an understanding of the intellecutal, social, emotional, and physical development of the age group"
+                }, {
+                    "type": 2,
+                    "optionText": "Communicates clearly and checks for understanding"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instructional Planning",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Uses student learning data to guide planning"
+                }, {
+                    "type": 2,
+                    "optionText": "Plans time for realistic pacing, content mastery, and transitions"
+                }, {
+                    "type": 2,
+                    "optionText": "Plans for differentiated instruction"
+                }, {
+                    "type": 2,
+                    "optionText": "Aligns lesson objectives to the school's curriculum and student learning needs"
+                }, {
+                    "type": 2,
+                    "optionText": "Develops appropriate long- and short-range plans and adapts plans"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Instructional Delivery",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Engages and maintains students in active learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Builds upon students' existing knowledge and skills"
+                }, {
+                    "type": 2,
+                    "optionText": "Differentiates instruction to meet the students' needs"
+                }, {
+                    "type": 2,
+                    "optionText": "Reinforces learning goals consistently throughout lessons"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses a variety of effective instructional strategies and resources"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses instructional technology to enhance student learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Communicates clearly and checks for understanding"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Assessment of and for Student Learning",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Uses pre-assessment data to develop expectations for students, to differentiate instruction, and to document learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Involves students in setting learning goals and monitoring their own progress"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses a variety of assessment strategies and instruments that are valid and appropriate for content and for the student population"
+                }, {
+                    "type": 2,
+                    "optionText": "Aligns student assessments with established curriculum standards and benchmarks"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses assessment tools for both formative and summative purposes and uses grading practices that report final mastery in relationship to content goals and objectives"
+                }, {
+                    "type": 2,
+                    "optionText": "Gives constructive and frequent feedback to students on their learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses assessment tools for both formative and summative purposes to inform, guide, and adjust students' learning"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Learning Environment",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Arranges the classroom to maximize learning while providing a safe environment"
+                }, {
+                    "type": 2,
+                    "optionText": "Establishes clear expectations, with student input, for classroom rules and procedures early in the school year, and enforces them consistently and fairly"
+                }, {
+                    "type": 2,
+                    "optionText": "Maximizes instructional time and minimizes disruptions"
+                }, {
+                    "type": 2,
+                    "optionText": "Establishes a climate of trust and teamwork by being fair, caring, respectful, and enthusiastic"
+                }, {
+                    "type": 2,
+                    "optionText": "Promotes cultural sensitivity"
+                }, {
+                    "type": 2,
+                    "optionText": "Actively listens and pays attention to students’ needs and responses"
+                }, {
+                    "type": 2,
+                    "optionText": "Maximizes instructional learning time by working with students individually as well as in small groups or whole groups"
+                }, {
+                    "type": 2,
+                    "optionText": "Respects students' diversity, including language, culture, race, gender, and special needs"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Professionalism",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Collaborates/communicates effectively within the school community to promote students' well-being and success"
+                }, {
+                    "type": 2,
+                    "optionText": "Adheres to federal and state laws, school policies, and ethical guidelines"
+                }, {
+                    "type": 2,
+                    "optionText": "Incorporates learning from professional growth opportunities into instructional practice"
+                }, {
+                    "type": 2,
+                    "optionText": "Sets goals for improvement of knowledge and skills"
+                }, {
+                    "type": 2,
+                    "optionText": "Engages in activities outside the classroom intended for school and student enhancement"
+                }, {
+                    "type": 2,
+                    "optionText": "Works in collegial and collaborative manner with administrators, other school personnel, and the community"
+                }, {
+                    "type": 2,
+                    "optionText": "Builds positive and professional relationships with parents/guardians through frequent and effective communication concerning students' progress"
+                }, {
+                    "type": 2,
+                    "optionText": "Serves as a contributing member of the school's professional learning community through collaboration with teaching colleagues"
+                }, {
+                    "type": 2,
+                    "optionText": "Demonstrates consistent mastery of standard oral and written English in all communication"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Student Academic Progress",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Sets acceptable, measurable, and appropriate achievement goals for student learning progress based on baseline data"
+                }, {
+                    "type": 2,
+                    "optionText": "Documents the progress of each student throughout the year"
+                }, {
+                    "type": 2,
+                    "optionText": "Provides evidence that achievement goals have been met, including the state-provided growth measure when available as well as other multiple measures of student academic progress"
+                }, {
+                    "type": 2,
+                    "optionText": "Uses available performance outcome data to continually document and communicate student academic progress and develop interim learning targets"
+                }]
+            }, {
+                "type": 1,
+                "questionText": "Teacher's Signature"
+            }, {
+                "type": 1,
+                "questionText": "Observer's Signature"
+            }]
+        }, {
+            "name": "Strengths and Areas for Improvement",
+            "indicators": [{
+                "type": 1,
+                "questionText": "Strengths"
+            }, {
+                "type": 1,
+                "questionText": "Areas of Improvement"
+            }]
+        }]
+    }
+}

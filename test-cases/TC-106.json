@@ -1,0 +1,230 @@
+{
+    "scenarioId": "TC-106",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-106-Rigor Template",
+        "groups": [{
+            "name": "Learner Engagement",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Intensity*** Postive body language, consistent focus, verbal participation, student confidence, and excitement",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Breadth*** Degree to which all students are engaged",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }, {
+                "type": 3,
+                "questionText": "Consistency*** Consistency of engagement through time observed",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }]
+        }, {
+            "name": "Evidence of Rigor",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Thinking*** Students are expected to reflect, research, analyze, or summarize",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Verbal Response*** Studens are expected to give thoughtful response that demonstrate understanding",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Work*** Students work requires creativity, originality, design, or adaption",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }]
+        }, {
+            "name": "Evidence or Relevance",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Work*** Student work is a real0world product or presentation done under real world conditions.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Resources*** Students use real-world resources in completing work",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Assessment*** Quality of work is judged on real-world authentic measures",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Low"
+                }, {
+                    "type": 2,
+                    "optionText": "Average"
+                }, {
+                    "type": 2,
+                    "optionText": "High"
+                }]
+            }]
+        }, {
+            "name": "Literacy",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Reading*** Collect data, facts, ideas from written and electronic sources; analyze experiences, ideas, and inforamtion presented by others",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Writing*** Use written language for self expression, to transmit information, to communicat effectively.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Speaking*** Use oral language for self expresion, to transmit information, to communicate effectively.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Listening*** Collect data, facts, ideas from oral and electronic sources; analyze experiences, ideas and information presented by others.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }]
+        }, {
+            "name": "Correlation to Standards",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Curriculum*** Objective of lesson relates to standard, content is alligned, content is appropriate to grade level.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Instruction*** Methodologies used will achieve standard; lesson is differentiated and accessible for all students.",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Assessment*** Formative assessment aligned with standard/objective",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }]
+        }, {
+            "name": "Standard Section",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Rigor/Relevance Quadrant",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Quadrant A"
+                }, {
+                    "type": 2,
+                    "optionText": "Quadrant B"
+                }, {
+                    "type": 2,
+                    "optionText": "Quadrant C"
+                }, {
+                    "type": 2,
+                    "optionText": "Quadrant D"
+                }]
+            }, {
+                "type": 1,
+                "questionText": "Recommendations"
+            }]
+        }]
+    }
+}

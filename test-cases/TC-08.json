@@ -1,0 +1,103 @@
+{
+    "scenarioId": "TC-08",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-08-Certified Staff Walk-Through",
+        "groups": [{
+            "name": "Classroom Environment",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Classroom Environment",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Positive interaction: student to student, teacher to student, and student to teacher."
+                }, {
+                    "type": 2,
+                    "optionText": "Safe classroom environment"
+                }, {
+                    "type": 2,
+                    "optionText": "Environment is conducive to learning"
+                }]
+            }]
+        }, {
+            "name": "Planning and Preparation",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Planning and Preparation",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Demonstration of knowledge of students, their needs, and abilities."
+                }, {
+                    "type": 2,
+                    "optionText": "Objectives and instructional goals are apparent"
+                }, {
+                    "type": 2,
+                    "optionText": "Lesson plans to guide instruction exist"
+                }, {
+                    "type": 2,
+                    "optionText": "Planned assessments of student learning are present"
+                }, {
+                    "type": 2,
+                    "optionText": "Atmosphere of organization is present"
+                }]
+            }]
+        }, {
+            "name": "Instruction",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Instruction",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Clear and accurate communication is present"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher models during instruction"
+                }, {
+                    "type": 2,
+                    "optionText": "All students are engaged in learning"
+                }, {
+                    "type": 2,
+                    "optionText": "Guided practice and feedback to students"
+                }, {
+                    "type": 2,
+                    "optionText": "Flexibility and responsiveness is present"
+                }, {
+                    "type": 2,
+                    "optionText": "Teacher is mobile"
+                }]
+            }]
+        }, {
+            "name": "Classroom management",
+            "indicators": [{
+                "type": 3,
+                "questionText": "Classroom management",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Teacher monitoring and support is present"
+                }, {
+                    "type": 2,
+                    "optionText": "Management of student behavior"
+                }, {
+                    "type": 2,
+                    "optionText": "Transitions are smooth"
+                }, {
+                    "type": 2,
+                    "optionText": "Routines and expectations are apparent"
+                }, {
+                    "type": 2,
+                    "optionText": "Clear behavioral and academic expectations exist"
+                }]
+            }]
+        }, {
+            "name": "Comments/Signature",
+            "indicators": [{
+                "type": 1,
+                "questionText": "Additional Comments"
+            }, {
+                "type": 1,
+                "questionText": "Administrator"
+            }]
+        }]
+    }
+}

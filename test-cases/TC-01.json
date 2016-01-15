@@ -1,0 +1,202 @@
+{
+    "scenarioId": "TC-01",
+    "scenario": "create-template",
+    "scenarioType": "success",
+    "data": {
+        "name": "TC-01-Classroom Walkthrough",
+        "groups": [{
+            "name": "Page 1",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Prime time-activity-reinforce",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Is lesson connected to real life?",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Marzano #2 (Notetaking)",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Marzano #1 (Analogies, Compare)",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "2-4 min. activity @ the beginning of class",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }]
+        }, {
+            "name": "Page 2",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Focus of Lesson",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "board"
+                }, {
+                    "type": 2,
+                    "optionText": "overhead"
+                }, {
+                    "type": 2,
+                    "optionText": "computer"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "teacher on task",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "teacher classification",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "KTIP"
+                }, {
+                    "type": 2,
+                    "optionText": "non tenured"
+                }, {
+                    "type": 2,
+                    "optionText": "tenured"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Marzano #3 (Providing Recognition)",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Choral Reading",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }]
+        }, {
+            "name": "Page 3",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Choral Responses",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Students Engaged",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Vocabulary",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Timeline",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Yes"
+                }, {
+                    "type": 2,
+                    "optionText": "No"
+                }]
+            }]
+        }, {
+            "name": "Page 4",
+            "indicators": [{
+                "type": 2,
+                "questionText": "Classroom environment",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "clean"
+                }, {
+                    "type": 2,
+                    "optionText": "neat"
+                }, {
+                    "type": 2,
+                    "optionText": "print rich"
+                }, {
+                    "type": 2,
+                    "optionText": "vocabulary"
+                }]
+            }, {
+                "type": 2,
+                "questionText": "Differentiation",
+                "answerOptions": [{
+                    "type": 2,
+                    "optionText": "Questions- varied difficulty"
+                }, {
+                    "type": 2,
+                    "optionText": "Oral activities"
+                }, {
+                    "type": 2,
+                    "optionText": "Visual activities"
+                }, {
+                    "type": 2,
+                    "optionText": "Group activities"
+                }, {
+                    "type": 2,
+                    "optionText": "Hands-on activities"
+                }]
+            }]
+        }]
+    }
+}
