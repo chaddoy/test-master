@@ -67,7 +67,8 @@ function getMachines ( slaves ) {
 		_.forEach( slave, function ( machine, machineKey ) {
 			let m = {
 				'id'       : machine.id,
-				'platform' : machine.platform
+				'platform' : machine.platform,
+				'name'     : machine.name
 			};
 			machines.push( m );
 		} );

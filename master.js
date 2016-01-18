@@ -94,6 +94,7 @@ Master.prototype.IAM = function ( socket, meta ) {
 
 	socket.id       = slaveMeta.id;
 	socket.platform = slaveMeta.platform;
+	socket.name     = slaveMeta.name;
 
 	if( !this.slaves[ platform ] ) {
 		this.slaves[ platform ] = {};
