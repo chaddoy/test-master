@@ -67,7 +67,7 @@ function getMachines ( slaves ) {
 	return machines;
 }
 
-function createWriteStream( session ) {
+function createWriteStream( session, machineId ) {
 	let writeStream = fs.createWriteStream( logPath + '/' + session + '.log', { 'flags' : 'w' } );
 	writeStream.on( 'error', function ( error ) {
 		// error
@@ -115,6 +115,7 @@ io.sockets.on( 'connection', ( socket ) => {
 	// Check what happened here
 	socket.on( 'browserstack-stream', ( data ) => {
 		_.forEach( io.sockets.connected, ( socketEach, socketId ) => {
+			//console.log(data);
 			socket.writeStream.write( data.data[ 0 ] );
 			socketEach.emit( 'browserstack-data-stream', {
 				'machineId' : socket.browserstackMachineId,

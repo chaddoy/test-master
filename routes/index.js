@@ -5,7 +5,7 @@ const mongoose         = require( 'mongoose' );
 const glob             = require( 'glob' );
 const protractorConfig = require( 'protractor-config' );
 const Test             = mongoose.models.Test;
-
+const fs = require('fs');
 // Test Cases
 const testCases = [];
 const logFiles  = [];
@@ -56,10 +56,11 @@ module.exports = function ( master ) {
 			'method' : 'GET',
 			'path' : '/logs/{logId}',
 			'handler' : function ( request, reply ) {
-				let logFilename = _.findWhere( logFiles, { 'filename' : request.params.logId } );
+
+				let logFilename = _.findWhere( logFiles, { 'filename' : request.params.logId + '.log' } );
 				fs.readFile( logFilename.file, 'utf8', function ( err, data ) {
 					if ( err ) {
-						return console.log( err );
+						return reply( err ).code( 404 );
 					}
 					return reply( data );
 				} );
@@ -204,6 +205,7 @@ module.exports = function ( master ) {
 					'machineId'       : machine.id,
 					'browserStackId'  : automationSession.hashed_id,
 					'browserStackURL' : automationSession.browser_url,
+					'session'         : automationSession.session,
 					'testCaseId'      : request.params.testCaseId,
 					'successCount'    : spec.successfulSpecs,
 					'failCount'       : spec.failedSpecs,
