@@ -120,7 +120,7 @@ io.sockets.on( 'connection', ( socket ) => {
 			'os_version'  : browserstack.automation_session.os_version
 		} );
 		socket.browserstackMachineId = machine.id;
-		socket.session               = data.session;
+		socket.session               = browserstack.automation_session.session;
 
 		// create write stream
 		socket.writeStream = createWriteStream( socket.session );

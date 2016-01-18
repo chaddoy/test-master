@@ -54,13 +54,11 @@ module.exports = function ( master ) {
 		},
 		{
 			'method' : 'GET',
-			'path' : '/logs/{logId}',
+			'path' : '/logs/{file}',
 			'handler' : function ( request, reply ) {
-
-				let logFilename = _.findWhere( logFiles, { 'filename' : request.params.logId + '.log' } );
-				fs.readFile( logFilename.file, 'utf8', function ( err, data ) {
+				fs.readFile( './testlogs/' + request.params.file + '.log', 'utf8', function ( err, data ) {
 					if ( err ) {
-						return reply( err ).code( 404 );
+						return reply( err );
 					}
 					return reply( data );
 				} );
