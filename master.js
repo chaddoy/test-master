@@ -61,7 +61,11 @@ function Master ( options ) {
 		} );
 
 		socket.on( 'close', () => {
-			delete this.slaves[ socket.platform ][ socket.id ];
+			if ( !socket.platform || !socket.id ) {
+				console.log( 'Socket not found no platform or id' );
+			} else {
+				delete this.slaves[ socket.platform ][ socket.id ];
+			}
 			this.emit( 'update-slaves-list', this.slaves );
 		} );
 
