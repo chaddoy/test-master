@@ -15,6 +15,15 @@ const protractorConfig = require( 'protractor-config' );
 mongoose.connect( config.mongodb );
 require( './models/Tests' );
 
+setInterval( function(){
+	console.log( 'Memory usage before clean up' );
+	console.log( process.memoryUsage() );
+  global.gc();
+	console.log( 'Memory usage after clean up' );
+	console.log( process.memoryUsage() );
+  console.log( 'GC done' );
+}, 1000 * 30 );
+
 // Start the master to listen
 master.on( 'listening', ( masterServer ) => {} );
 master.on( 'error', ( error ) => {
@@ -98,6 +107,10 @@ io.sockets.on( 'connection', ( socket ) => {
 		socket.emit( 'update-slaves-list', machines );
 	} );
 
+	socket.on( 'end-socket', () => {
+		socket.writeStream.end();
+	} );
+
 	socket.on( 'register-browserstack', ( data ) => {
 		socket.join( 'browserstack-slave' );
 		var browserstack = data.browserstack;
@@ -114,9 +127,8 @@ io.sockets.on( 'connection', ( socket ) => {
 	} );
 	// Check what happened here
 	socket.on( 'browserstack-stream', ( data ) => {
+		socket.writeStream.write( data.data[ 0 ] );
 		_.forEach( io.sockets.connected, ( socketEach, socketId ) => {
-			//console.log(data);
-			socket.writeStream.write( data.data[ 0 ] );
 			socketEach.emit( 'browserstack-data-stream', {
 				'machineId' : socket.browserstackMachineId,
 				'data'      : data.data[ 0 ]
