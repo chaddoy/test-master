@@ -61,6 +61,8 @@ var SlaveContainer = React.createClass( {
 
 	'_runAll' : function ( e ) {
 		let select   = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
+		let username = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
+		let password = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
 		for (var i = 0; i < select.length; i++) {
 			$.get( 'http://localhost:3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + select.options[i].value + '?username=' + username + '&password=' + password, function () {
 				console.log( 'sucess' );
