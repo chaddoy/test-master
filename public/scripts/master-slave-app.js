@@ -17,7 +17,7 @@ var SlaveTabs = React.createClass( {
 							return (
 								<li key={ key } role="presentation" className={ slave.activeTab ? 'active' : '' }>
 									<a href="#" data-index={ key } onClick={ this._handleClick }>
-									{ slave.name }-{ slave.id }
+									{ slave.name }
 									</a>
 								</li>
 							);
@@ -73,7 +73,7 @@ var SlaveContainer = React.createClass( {
 	'render' : function () {
 		return (
 			<div className="col-xs-12">
-				<h3>{ this.props.slave.name }-{ this.props.slave.id }</h3>
+				<h3>{ this.props.slave.name }</h3>
 				<input type="text" className="form-control" placeholder="Username" />
 				<input type="text" className="form-control" placeholder="Password" />
 				<button type="button" className="btn btn-primary" onClick={ this._runAll }>Run All</button>
