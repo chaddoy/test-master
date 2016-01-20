@@ -88,7 +88,6 @@ function createWriteStream( session, machineId ) {
 }
 
 function slaveStream( socket, data ) {
-	console.log( socket );
 	socket.writeStream.write( data.data[ 0 ] );
 	_.forEach( io.sockets.connected, ( socketEach, socketId ) => {
 		socketEach.emit( 'browserstack-data-stream', {
