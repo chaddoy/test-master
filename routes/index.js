@@ -1,12 +1,14 @@
 'use strict';
 
-const _                = require( 'lodash' );
-const mongoose         = require( 'mongoose' );
-const glob             = require( 'glob' );
-const protractorConfig = require( 'protractor-config' );
-const Test             = mongoose.models.Test;
-const Slave            = mongoose.models.Slave;
-const fs               = require('fs');
+const _        = require( 'lodash' );
+const mongoose = require( 'mongoose' );
+const glob     = require( 'glob' );
+const Test     = mongoose.models.Test;
+const Slave    = mongoose.models.Slave;
+const fs       = require( 'fs' );
+
+const protractorConfig   = require( 'protractor-config' );
+
 // Test Cases
 const testCases = [];
 const logFiles  = [];
@@ -24,7 +26,7 @@ glob( process.cwd() + '/testlogs/*', function ( err, files ) {
 	} );
 } );
 
-glob( process.cwd() + '/test-cases/*', function ( err, files ) {
+glob( process.cwd() + '/observation-public-tests/test/sandbox/converted-jsons/*', function ( err, files ) {
 	files.forEach( function ( file ) {
 		let fileName = file.split( '/' );
 		let data = {

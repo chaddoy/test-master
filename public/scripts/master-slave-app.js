@@ -1,6 +1,5 @@
 'use strict';
-
-var socket = io( 'ws://localhost:3401' );
+var socket  = io( 'ws://localhost:3401' );
 
 var SlaveTabs = React.createClass( {
 	'_handleClick' : function ( e ) {
@@ -59,15 +58,43 @@ var SlaveContainer = React.createClass( {
 		} );
 	},
 
-	'_runAll' : function ( e ) {
-		let select   = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
-		let username = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
-		let password = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
-		for (var i = 0; i < select.length; i++) {
-			$.get( 'http://localhost:3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + select.options[i].value + '?username=' + username + '&password=' + password, function () {
-				console.log( 'sucess' );
+	'popArrayPromise' : function () {
+		if ( this.arrayPromise.length > 0 ) {
+			var promise = this.arrayPromise.pop();
+
+			promise().then( function () {
+				this.popArrayPromise();
+			}.bind( this ) );
+		}
+	},
+
+	'pushArrayPromise' : function ( slavePlatform, slaveId, optValue, username, password ) {
+		this.arrayPromise.push( function () {
+			return new Promise( function ( resolve, reject) {
+				$.get( 'http://localhost:3400/vms/' + slavePlatform + '/' + slaveId + '/' + optValue + '?username=' + username + '&password=' + password, function () {
+					console.log( 'sucess' );
+					resolve();
+				} );
 			} );
+		} );
+	},
+
+	'_runAll' : function ( e ) {
+		let select        = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
+		let username      = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
+		let password      = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
+		let slavePlatform = this.props.slave.platform;
+		let slaveId       = this.props.slave.id;
+		let optionValue;
+		this.arrayPromise = [];
+
+		for ( var i = 0; i < select.length; i++ ) {
+			optionValue = select.options[i].value;
+			this.pushArrayPromise( slavePlatform, slaveId, optionValue, username, password );
 		};
+
+		this.popArrayPromise( this.arrayPromise );
+
 	},
 
 	'render' : function () {
