@@ -8,9 +8,12 @@ var SlaveTabs = React.createClass( {
 	},
 
 	'render' : function () {
+		var navbarStyle = {
+			'clear' : 'both'
+		};
 
 		return (
-			<div className="navbar">
+			<div className="navbar" style={ navbarStyle }>
 				<ul className="nav nav-tabs">
 					{
 						this.props.slaves.map( function ( slave, key ) {
@@ -24,98 +27,6 @@ var SlaveTabs = React.createClass( {
 						}.bind( this ) )
 					}
 				</ul>
-			</div>
-		);
-	}
-
-} );
-
-var SlaveContainer = React.createClass( {
-
-	'getInitialState': function() {
-			return {
-				'data' : [ 's' ]
-			};
-	},
-
-	'componentDidMount' : function () {
-		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
-			if ( this.isMounted() ) {
-				this.setState( {
-					data : result
-				} );
-			}
-		}.bind( this ) );
-	},
-
-	'_handleClick' : function ( e ) {
-		let select   = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
-		let selected = select.options[ select.selectedIndex ].value;
-		let username = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
-		let password = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
-
-		$.get( 'http://' + host + ':3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + selected + '?username=' + username + '&password=' + password, function () {
-			console.log( 'sucess' );
-		} );
-	},
-
-	'popArrayPromise' : function () {
-		if ( this.arrayPromise.length > 0 ) {
-			var promise = this.arrayPromise.pop();
-
-			promise().then( function () {
-				this.popArrayPromise();
-			}.bind( this ) );
-		}
-	},
-
-	'pushArrayPromise' : function ( slavePlatform, slaveId, optValue, username, password ) {
-		this.arrayPromise.push( function () {
-			return new Promise( function ( resolve, reject) {
-				$.get( 'http://' + host + ':3400/vms/' + slavePlatform + '/' + slaveId + '/' + optValue + '?username=' + username + '&password=' + password, function () {
-					console.log( 'sucess' );
-					resolve();
-				} );
-			} );
-		} );
-	},
-
-	'_runAll' : function ( e ) {
-		let select        = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
-		let username      = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
-		let password      = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
-		let slavePlatform = this.props.slave.platform;
-		let slaveId       = this.props.slave.id;
-		let optionValue;
-		this.arrayPromise = [];
-
-		for ( var i = 0; i < select.length; i++ ) {
-			optionValue = select.options[i].value;
-			this.pushArrayPromise( slavePlatform, slaveId, optionValue, username, password );
-		};
-
-		this.popArrayPromise( this.arrayPromise );
-
-	},
-
-	'render' : function () {
-		return (
-			<div className="col-xs-12">
-				<h3>{ this.props.slave.name }</h3>
-				<input type="text" className="form-control" placeholder="Username" />
-				<input type="text" className="form-control" placeholder="Password" />
-				<button type="button" className="btn btn-primary" onClick={ this._runAll }>Run All</button>
-				<button type="button" className="btn btn-primary" onClick={ this._handleClick }>Run</button>
-				<select>
-				{
-					this.state.data.map( function ( file ) {
-						return (
-							<option value={ file.filename }>{ file.filename }</option>
-						);
-					}.bind( this ) )
-				}
-				</select>
-				<button type="button" className="btn btn-danger">Cancel</button>
 			</div>
 		);
 	}
@@ -159,6 +70,8 @@ var MasterSlaveApp = React.createClass( {
 
 	'getInitialState' : function () {
 		return {
+			'users'       : [ ],
+			'data'        : [ ],
 			'slaves'      : [ ],
 			'activeSlave' : {
 				'id'        : '',
@@ -174,6 +87,14 @@ var MasterSlaveApp = React.createClass( {
 		socket.on( 'data-stream', this._streamData );
 		socket.on( 'disconnect', this._disconnect );
 		socket.on( 'update-slaves-list', this._updateSlaveList );
+
+		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
+			if ( this.isMounted() ) {
+				this.setState( {
+					data : result
+				} );
+			}
+		}.bind( this ) );
 	},
 
 	'_initialize' : function () {
@@ -218,11 +139,97 @@ var MasterSlaveApp = React.createClass( {
 		this.setState( { 'activeSlave' : activeSlave } );
 	},
 
+	'getUsers' : function ( textarea ) {
+		var textAreaValue = textarea.value.replace( '[', '' ).replace( ']', '' ).split( '},' );
+		var users         = [ ];
+
+		textAreaValue.map( function ( value ) {
+			users.push( JSON.parse( value.replace( '}', '' ) + '}' ) );
+		} );
+
+		return users;
+	},
+
+	'getRandomUser' : function ( textarea ) {
+		var randomKey = Math.floor(Math.random() * this.getUsers( textarea ).length ) + 1;
+		return this.getUsers( textarea )[ randomKey - 1 ];
+	},
+
+	'arrayPromise' : [ ],
+
+	'popArrayPromise' : function () {
+		if ( this.arrayPromise.length > 0 ) {
+			var promise = this.arrayPromise.pop();
+
+			promise().then( function () {
+				this.popArrayPromise();
+			}.bind( this ) );
+		}
+	},
+
+	'pushArrayPromise' : function ( slave, testCase, user ) {
+		this.arrayPromise.push( function () {
+			return new Promise( function ( resolve, reject) {
+				$.get( 'http://' + host + ':3400/vms/' + slave.platform + '/' + slave.id + '/' + testCase + '?username=' + user.username + '&password=' + user.password + '&district=' + user.district + '&school=' + user.school, function () {
+					console.log( 'sucess' );
+					resolve();
+				} );
+			} );
+		} );
+	},
+
+	'run' : function ( e ) {
+		let caseLimit = 50;
+		let textarea  = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
+
+		if ( textarea.value && this.state.data.length && this.state.slaves.length ) {
+			let user = this.getRandomUser( textarea );
+
+			this.state.slaves.map( ( slave ) => {
+				for( var i = 0; i < this.state.data.length; i++ ) {
+					this.pushArrayPromise( slave, this.state.data[ i ].filename, user );
+
+					if ( i === caseLimit ) {
+						return;
+					}
+				}
+			} );
+
+			this.popArrayPromise( this.arrayPromise );
+		}
+
+	},
+
 	'render' : function () {
 		return (
 			<div>
+				<hr />
+
+				<div className="col-xs-12">
+					<h3>Format:</h3>
+					<code>
+						&#91;
+						&#123;
+							"username": "USERNAME",
+							"password": "PASSWORD",
+							"district": "DISTRICT",
+							"school": "school"
+						&#125;
+						&#93;
+					</code>
+					<br />
+					<br />
+				</div>
+
+				<div className="col-xs-12">
+					<textarea rows="8" cols="60"></textarea>
+					<br />
+					<button type="button" className="btn btn-primary" onClick={ this.run }>Run</button>
+					<br />
+					<br />
+				</div>
+
 				<SlaveTabs slaves={ this.state.slaves } onSwitchTab={ this._setActiveTab } />
-				<SlaveContainer slave={ this.state.activeSlave } />
 				<StdoutContainer slave={ this.state.activeSlave } />
 			</div>
 		);
