@@ -19,11 +19,19 @@ const master = require( './master' );
 
 setInterval( function(){
 	console.log( 'Memory usage before clean up' );
-	console.log( process.memoryUsage() );
+	let mem = process.memoryUsage();
+
+	console.log( 'rss       ', mem.rss );
+	console.log( 'heapTotal ', mem.heapTotal );
+	console.log( 'heapUsed  ', mem.heapUsed );
   global.gc();
 	console.log( 'Memory usage after clean up' );
-	console.log( process.memoryUsage() );
-  console.log( 'GC done' );
+
+	mem = process.memoryUsage();
+	console.log( 'rss       ', mem.rss );
+	console.log( 'heapTotal ', mem.heapTotal );
+	console.log( 'heapUsed  ', mem.heapUsed );
+  console.log( 'GC done', ( new Date() ).toString() );
 }, 1000 * 30 );
 
 // Start the master to listen
