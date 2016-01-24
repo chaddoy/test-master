@@ -21,16 +21,16 @@ setInterval( function(){
 	console.log( 'Memory usage before clean up' );
 	let mem = process.memoryUsage();
 
-	console.log( 'rss       ', mem.rss );
-	console.log( 'heapTotal ', mem.heapTotal );
-	console.log( 'heapUsed  ', mem.heapUsed );
+	console.log( 'rss       ', mem.rss / ( 1024 * 1024 ) );
+	console.log( 'heapTotal ', mem.heapTotal / ( 1024 * 1024 ));
+	console.log( 'heapUsed  ', mem.heapUsed / ( 1024 * 1024 ));
   global.gc();
 	console.log( 'Memory usage after clean up' );
 
 	mem = process.memoryUsage();
-	console.log( 'rss       ', mem.rss );
-	console.log( 'heapTotal ', mem.heapTotal );
-	console.log( 'heapUsed  ', mem.heapUsed );
+	console.log( 'rss       ', mem.rss / ( 1024 * 1024 ));
+	console.log( 'heapTotal ', mem.heapTotal / ( 1024 * 1024 ));
+	console.log( 'heapUsed  ', mem.heapUsed / ( 1024 * 1024 ));
   console.log( 'GC done', ( new Date() ).toString() );
 }, 1000 * 30 );
 
