@@ -48,6 +48,8 @@ function Master ( options ) {
 					} );
 				} else if( command === 'FIREHOSE' ) {
 					this[ command ]( socket, commands[ i ] );
+				} else if ( command == 'CLOSE' ) {
+					this.closeSocket( socket );
 				} else {
 					// There should be reconnect of packet if there is data loss
 					if( this[ command ] ) {
@@ -62,12 +64,7 @@ function Master ( options ) {
 		} );
 
 		socket.on( 'close', () => {
-			if ( !socket.platform || !socket.id ) {
-				console.log( 'Socket not found no platform or id' );
-			} else {
-				delete this.slaves[ socket.platform ][ socket.id ];
-			}
-			this.emit( 'update-slaves-list', this.slaves );
+			this.closeSocket( socket );
 		} );
 
 		socket.on( 'end', function () {
@@ -88,10 +85,26 @@ function Master ( options ) {
 
 util.inherits( Master, EventEmitter );
 
+Master.prototype.closeSocket = function ( socket ) {
+
+	if ( !socket.platform || !socket.id ) {
+		console.log( 'Socket not found no platform or id ', socket.platform, socket.id );
+	} else {
+		delete this.slaves[ socket.platform ][ socket.id ];
+	}
+
+	socket.destroy();
+	this.emit( 'update-slaves-list', this.slaves );
+};
+
 Master.prototype.IAM = function ( socket, meta ) {
 
 	let slaveMeta   = JSON.parse( meta[ 1 ] );
 	let platform    = slaveMeta.platform;
+
+	if ( !socket ) {
+		console.log( 'socket doesn\'t exists' );
+	}
 
 	socket.id             = slaveMeta.id;
 	socket.platform       = slaveMeta.platform;
@@ -100,7 +113,7 @@ Master.prototype.IAM = function ( socket, meta ) {
 	socket.browserVersion = slaveMeta.browserVersion;
 	socket.osVersion      = slaveMeta.osVersion;
 
-	if( !this.slaves[ platform ] ) {
+	if ( !this.slaves[ platform ] ) {
 		this.slaves[ platform ] = {};
 	}
 
