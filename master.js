@@ -5,13 +5,9 @@ const uuid         = require( 'uuid' );
 const EventEmitter = require( 'events' );
 const util         = require( 'util' );
 const _            = require( 'lodash' );
-
-const testProtocol   = require( 'test-protocol' );
-const read           = testProtocol.read;
-const transformWrite = testProtocol.write;
-
-const mongoose = require( 'mongoose' );
-const Slave    = mongoose.models.Slave;
+const TestProtocol = require( 'test-protocol' );
+const mongoose     = require( 'mongoose' );
+const Slave        = mongoose.models.Slave;
 
 function debug () {
 	console.log.apply( null, Array.prototype.slice.call( arguments ) );
@@ -31,13 +27,15 @@ function Master ( options ) {
 
 	this.server = net.createServer( ( socket ) => {
 
+		socket.testProtocol = new TestProtocol();
+
 		socket.on( 'connected', function () {
 			debug( 'Hello' );
 		} );
 
 		socket.on( 'data', ( data ) => {
 
-			let commands = read( data );
+			let commands = socket.testProtocol.read( data );
 
 			for( let i = 0; i < commands.length; ++i ) {
 
@@ -127,7 +125,7 @@ Master.prototype.IAM = function ( socket, meta ) {
 	} );
 
 	// Reply for good
-	socket.write( transformWrite.apply( null, [ 'REPLY', 'HI', socket.id ] ) );
+	socket.write( socket.testProtocol.write.apply( null, [ 'REPLY', 'HI', socket.id ] ) );
 
 	// Update slaves list
 	this.emit( 'update-slaves-list', this.slaves );
@@ -166,7 +164,7 @@ Master.prototype.exec = function ( targetMachine, commandObject, cb ) {
 
 	let command = JSON.stringify( commandObject );
 	let machine = this.slaves[ targetMachine.platform ][ targetMachine.machine ];
-	machine.write( transformWrite( 'RUN', command ) );
+	machine.write( machine.testProtocol.write( 'RUN', command ) );
 	machine.queue.push( cb );
 };
 
