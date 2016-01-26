@@ -1,5 +1,6 @@
 'use strict';
-var socket  = io( 'ws://localhost:3401' );
+var host   = 'localhost';
+var socket = io( 'ws://' + host + ':3401' );
 
 var SlaveTabs = React.createClass( {
 	'_handleClick' : function ( e ) {
@@ -38,7 +39,7 @@ var SlaveContainer = React.createClass( {
 	},
 
 	'componentDidMount' : function () {
-		$.get( 'http://localhost:3400/test-cases', function( result ) {
+		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
 			if ( this.isMounted() ) {
 				this.setState( {
 					data : result
@@ -53,7 +54,7 @@ var SlaveContainer = React.createClass( {
 		let username = e.target.parentNode.getElementsByTagName( 'input' )[ 0 ].value;
 		let password = e.target.parentNode.getElementsByTagName( 'input' )[ 1 ].value;
 
-		$.get( 'http://localhost:3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + selected + '?username=' + username + '&password=' + password, function () {
+		$.get( 'http://' + host + ':3400/vms/' + this.props.slave.platform + '/' + this.props.slave.id + '/' + selected + '?username=' + username + '&password=' + password, function () {
 			console.log( 'sucess' );
 		} );
 	},
@@ -71,7 +72,7 @@ var SlaveContainer = React.createClass( {
 	'pushArrayPromise' : function ( slavePlatform, slaveId, optValue, username, password ) {
 		this.arrayPromise.push( function () {
 			return new Promise( function ( resolve, reject) {
-				$.get( 'http://localhost:3400/vms/' + slavePlatform + '/' + slaveId + '/' + optValue + '?username=' + username + '&password=' + password, function () {
+				$.get( 'http://' + host + ':3400/vms/' + slavePlatform + '/' + slaveId + '/' + optValue + '?username=' + username + '&password=' + password, function () {
 					console.log( 'sucess' );
 					resolve();
 				} );
