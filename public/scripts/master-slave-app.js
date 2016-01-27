@@ -60,6 +60,8 @@ var StdoutContainer = React.createClass( {
 						}
 					} )
 				}
+
+				<hr />
 			</div>
 		);
 	}
@@ -201,7 +203,24 @@ var MasterSlaveApp = React.createClass( {
 				this.requestByBatch( slave, user, this.state.data, caseLimit );
 			} );
 
-			this.popArrayPromise( this.arrayPromise );
+			this.popArrayPromise();
+		}
+	},
+
+	'runOne' : function ( e ) {
+		let caseLimit = 50;
+		let textarea  = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
+		let select    = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
+		let selected  = select.options[ select.selectedIndex ].value;
+
+		if ( textarea.value && this.state.data.length && this.state.slaves.length ) {
+			let user = this.getRandomUser( textarea );
+
+			this.state.slaves.map( ( slave ) => {
+				this.pushArrayPromise( slave, selected, user );
+			} );
+
+			this.popArrayPromise();
 		}
 	},
 
@@ -229,7 +248,19 @@ var MasterSlaveApp = React.createClass( {
 				<div className="col-xs-12">
 					<textarea rows="8" cols="60"></textarea>
 					<br />
-					<button type="button" className="btn btn-primary" onClick={ this.run }>Run</button>
+					<button type="button" className="btn btn-primary" onClick={ this.runOne }>Run</button>
+					&nbsp;&nbsp;&nbsp;
+					<select>
+						{
+							this.state.data.map( function ( file ) {
+								return (
+									<option value={ file.filename }>{ file.filename }</option>
+								);
+							}.bind( this ) )
+						}
+					</select>
+					&nbsp;&nbsp;&nbsp;
+					<button type="button" className="btn btn-primary" onClick={ this.run }>Run All</button>
 					<br />
 					<br />
 				</div>
