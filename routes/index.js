@@ -161,10 +161,10 @@ module.exports = function ( master ) {
 				};
 
 				let env = {
-					'username' : request.query.username,
-					'password' : request.query.password,
-					'district' : request.query.district,
-					'school'   : request.query.school
+					'username'  : request.query.username,
+					'password'  : request.query.password,
+					'firstname' : request.query.firstname,
+					'school'    : request.query.school
 				};
 
 				let id = request.params.testCaseId || 'TC-20.json';

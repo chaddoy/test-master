@@ -169,8 +169,8 @@ var MasterSlaveApp = React.createClass( {
 
 	'pushArrayPromise' : function ( slave, testCase, user ) {
 		this.arrayPromise.push( function () {
-			return new Promise( function ( resolve, reject ) {
-				$.get( 'http://' + host + ':3400/vms/' + slave.platform + '/' + slave.id + '/' + testCase + '?username=' + user.username + '&password=' + user.password + '&district=' + user.district + '&school=' + user.school, function () {
+			return new Promise( function ( resolve, reject) {
+				$.get( 'http://' + host + ':3400/vms/' + slave.platform + '/' + slave.id + '/' + testCase + '?username=' + user.username + '&password=' + user.password + '&firstname=' + user.firstname + '&school=' + user.school, function () {
 					console.log( 'sucess' );
 					resolve();
 				} );
@@ -217,7 +217,7 @@ var MasterSlaveApp = React.createClass( {
 						&#123;
 							"username": "USERNAME",
 							"password": "PASSWORD",
-							"district": "DISTRICT",
+							"firstname": "FIRSTNAME",
 							"school": "school"
 						&#125;
 						&#93;
