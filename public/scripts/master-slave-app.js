@@ -90,6 +90,10 @@ var MasterSlaveApp = React.createClass( {
 		socket.on( 'disconnect', this._disconnect );
 		socket.on( 'update-slaves-list', this._updateSlaveList );
 
+		socket.on( 'testcase-end', function ( data ) {
+			console.log( data );
+		} );
+
 		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
 			if ( this.isMounted() ) {
 				this.setState( {

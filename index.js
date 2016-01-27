@@ -128,8 +128,11 @@ io.sockets.on( 'connection', ( socket ) => {
 		socket.emit( 'update-slaves-list', machines );
 	} );
 
-	socket.on( 'end-socket', () => {
+	socket.on( 'end-socket', ( data ) => {
 		socket.writeStream.end();
+		_.forEach( io.sockets.connected, ( socketend, socketId ) => {
+			socketend.emit( 'testcase-end', data );
+		} );
 	} );
 
 	socket.on( 'register-browserstack', ( data ) => {
