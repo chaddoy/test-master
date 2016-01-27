@@ -169,13 +169,25 @@ var MasterSlaveApp = React.createClass( {
 
 	'pushArrayPromise' : function ( slave, testCase, user ) {
 		this.arrayPromise.push( function () {
-			return new Promise( function ( resolve, reject) {
+			return new Promise( function ( resolve, reject ) {
 				$.get( 'http://' + host + ':3400/vms/' + slave.platform + '/' + slave.id + '/' + testCase + '?username=' + user.username + '&password=' + user.password + '&district=' + user.district + '&school=' + user.school, function () {
 					console.log( 'sucess' );
 					resolve();
 				} );
 			} );
 		} );
+	},
+
+	'requestByBatch' : function ( slave, user, testCases, caseLimit ) {
+		for ( var i = 0; i < testCases.length; i++ ) {
+			this.pushArrayPromise( slave, testCases[ i ].filename, user );
+
+			if ( i === caseLimit ) {
+				var splicedCases = testCases.splice( 0, caseLimit );
+				this.requestByBatch( slave, user, splicedCases, caseLimit );
+				return;
+			}
+		}
 	},
 
 	'run' : function ( e ) {
@@ -186,18 +198,11 @@ var MasterSlaveApp = React.createClass( {
 			let user = this.getRandomUser( textarea );
 
 			this.state.slaves.map( ( slave ) => {
-				for( var i = 0; i < this.state.data.length; i++ ) {
-					this.pushArrayPromise( slave, this.state.data[ i ].filename, user );
-
-					if ( i === caseLimit ) {
-						return;
-					}
-				}
+				this.requestByBatch( slave, user, this.state.data, caseLimit );
 			} );
 
 			this.popArrayPromise( this.arrayPromise );
 		}
-
 	},
 
 	'render' : function () {
