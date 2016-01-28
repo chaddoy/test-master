@@ -74,6 +74,7 @@ var MasterSlaveApp = React.createClass( {
 		return {
 			'users'       : [ ],
 			'data'        : [ ],
+			'dataSelect'  : [ ],
 			'slaves'      : [ ],
 			'activeSlave' : {
 				'id'        : '',
@@ -99,6 +100,25 @@ var MasterSlaveApp = React.createClass( {
 				this.setState( {
 					data : result
 				} );
+
+				// these are all for UI not to hang
+				var endCount   = 500;
+				var interval   = 500;
+				var timeout = setInterval( function () {
+					var clear = 0;
+					if ( endCount >= result.length ) {
+						clearTimeout( timeout );
+						clear = 1;
+						console.log( 'done options' );
+					}
+					this.setState( {
+						dataSelect : result.slice( 0, endCount )
+					} );
+					endCount += interval;
+					if ( clear ) { // cleanup
+						this.state.dataSelect = null;
+					}
+				}.bind( this ), 1000 );
 			}
 		}.bind( this ) );
 	},
@@ -256,7 +276,7 @@ var MasterSlaveApp = React.createClass( {
 					&nbsp;&nbsp;&nbsp;
 					<select>
 						{
-							this.state.data.map( function ( file ) {
+							this.state.dataSelect.map( function ( file ) {
 								return (
 									<option value={ file.filename }>{ file.filename }</option>
 								);
