@@ -91,9 +91,7 @@ var MasterSlaveApp = React.createClass( {
 		socket.on( 'disconnect', this._disconnect );
 		socket.on( 'update-slaves-list', this._updateSlaveList );
 
-		socket.on( 'testcase-end', function ( data ) {
-			console.log( data );
-		} );
+		socket.on( 'testcase-end', this._onTestCaseEnd );
 
 		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
 			if ( this.isMounted() ) {
@@ -181,6 +179,15 @@ var MasterSlaveApp = React.createClass( {
 		return this.getUsers( textarea )[ randomKey - 1 ];
 	},
 
+	'getSlaveData' : function ( slaveName ) {
+		return this.state.slaves.filter( ( slave ) => {
+			return slave.name === slaveName;
+		} )[ 0 ];
+	},
+
+	'caseCount'    : 0,
+	'caseLimit'    : 1,
+	'currentUser'  : { },
 	'arrayPromise' : [ ],
 
 	'popArrayPromise' : function () {
@@ -204,27 +211,26 @@ var MasterSlaveApp = React.createClass( {
 		} );
 	},
 
-	'requestByBatch' : function ( slave, user, testCases, caseLimit ) {
-		for ( var i = 0; i < testCases.length; i++ ) {
-			this.pushArrayPromise( slave, testCases[ i ].filename, user );
-
-			if ( i === caseLimit ) {
-				var splicedCases = testCases.splice( 0, caseLimit );
-				this.requestByBatch( slave, user, splicedCases, caseLimit );
-				return;
-			}
+	'requestByBatch' : function ( slave, user, testCases, limit ) {
+		for ( var i = 0; i < limit; i++ ) {
+			this.caseCount++;
+			this.pushArrayPromise( slave, testCases[ this.caseCount - 1 ].filename, user );
 		}
 	},
 
+	'_onTestCaseEnd' : function ( data ) {
+		this.requestByBatch( this.getSlaveData( data.name ), this.currentUser, this.state.data, this.caseLimit );
+		this.popArrayPromise();
+	},
+
 	'run' : function ( e ) {
-		let caseLimit = 50;
-		let textarea  = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
+		let textarea = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
 
 		if ( textarea.value && this.state.data.length && this.state.slaves.length ) {
-			let user = this.getRandomUser( textarea );
+			this.currentUser = this.getRandomUser( textarea );
 
 			this.state.slaves.map( ( slave ) => {
-				this.requestByBatch( slave, user, this.state.data, caseLimit );
+				this.requestByBatch( slave, this.currentUser, this.state.data, this.caseLimit );
 			} );
 
 			this.popArrayPromise();
@@ -232,16 +238,15 @@ var MasterSlaveApp = React.createClass( {
 	},
 
 	'runOne' : function ( e ) {
-		let caseLimit = 50;
 		let textarea  = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
 		let select    = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
 		let selected  = select.options[ select.selectedIndex ].value;
 
 		if ( textarea.value && this.state.data.length && this.state.slaves.length ) {
-			let user = this.getRandomUser( textarea );
+			this.currentUser = this.getRandomUser( textarea );
 
 			this.state.slaves.map( ( slave ) => {
-				this.pushArrayPromise( slave, selected, user );
+				this.pushArrayPromise( slave, selected, this.currentUser );
 			} );
 
 			this.popArrayPromise();
