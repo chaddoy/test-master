@@ -86,11 +86,12 @@ var MasterSlaveApp = React.createClass( {
 	},
 
 	'componentDidMount' : function () {
+		localStorage.caseCount = 0;
+
 		socket.on( 'connect', this._initialize );
 		socket.on( 'data-stream', this._streamData );
 		socket.on( 'disconnect', this._disconnect );
 		socket.on( 'update-slaves-list', this._updateSlaveList );
-
 		socket.on( 'testcase-end', this._onTestCaseEnd );
 
 		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
@@ -185,7 +186,6 @@ var MasterSlaveApp = React.createClass( {
 		} )[ 0 ];
 	},
 
-	'caseCount'    : 0,
 	'caseLimit'    : 1,
 	'currentUser'  : { },
 	'arrayPromise' : [ ],
@@ -213,8 +213,8 @@ var MasterSlaveApp = React.createClass( {
 
 	'requestByBatch' : function ( slave, user, testCases, limit ) {
 		for ( var i = 0; i < limit; i++ ) {
-			this.caseCount++;
-			this.pushArrayPromise( slave, testCases[ this.caseCount - 1 ].filename, user );
+			localStorage.caseCount++;
+			this.pushArrayPromise( slave, testCases[ localStorage.caseCount - 1 ].filename, user );
 		}
 	},
 
