@@ -223,6 +223,10 @@ var MasterSlaveApp = React.createClass( {
 		this.popArrayPromise();
 	},
 
+	'resetCaseCount' : function () {
+		localStorage.caseCount = 0;
+	},
+
 	'run' : function ( e ) {
 		let textarea = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
 
@@ -290,6 +294,8 @@ var MasterSlaveApp = React.createClass( {
 					</select>
 					&nbsp;&nbsp;&nbsp;
 					<button type="button" className="btn btn-primary" onClick={ this.run }>Run All</button>
+					&nbsp;&nbsp;
+					<button type="button" className="btn btn-danger" onClick={ this.resetCaseCount }>Reset</button>
 					<br />
 					<br />
 				</div>
