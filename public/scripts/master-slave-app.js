@@ -1,6 +1,7 @@
 'use strict';
-var host   = 'localhost';
-var socket = io( 'ws://' + host + ':3401' );
+var host         = 'localhost';
+var socket       = io( 'ws://' + host + ':3401' );
+var moreInterval = 500;
 
 var SlaveTabs = React.createClass( {
 	'_handleClick' : function ( e ) {
@@ -94,29 +95,30 @@ var MasterSlaveApp = React.createClass( {
 		socket.on( 'update-slaves-list', this._updateSlaveList );
 		socket.on( 'testcase-end', this._onTestCaseEnd );
 
+		var defaultSelect = [ { filename : 'No Test Case' } ];
+		this.setState( {
+			dataSelect : defaultSelect
+		} );
+
 		$.get( 'http://' + host + ':3400/test-cases', function( result ) {
 			if ( this.isMounted() ) {
 				this.setState( {
 					data : result
 				} );
 
-				// these are all for UI not to hang
-				var endCount   = 500;
-				var interval   = 500;
-				var timeout = setInterval( function () {
-					var clear = 0;
-					if ( endCount >= result.length ) {
-						clearTimeout( timeout );
-						clear = 1;
-						console.log( 'done options' );
-					}
-					this.setState( {
-						dataSelect : result.slice( 0, endCount )
-					} );
-					endCount += interval;
-				}.bind( this ), 1000 );
+				this.setState( {
+					dataSelect : result.slice( 0, moreInterval )
+				} );
+
 			}
 		}.bind( this ) );
+	},
+
+	'more' : function () {
+		var endCount = this.state.dataSelect.length + moreInterval;
+		this.setState( {
+			dataSelect : this.state.data.slice( 0, endCount )
+		} );
 	},
 
 	'_initialize' : function () {
@@ -290,13 +292,20 @@ var MasterSlaveApp = React.createClass( {
 						}
 					</select>
 					&nbsp;&nbsp;&nbsp;
+
+					<button type="button" className="btn btn-primary" onClick={ this.more }>More( test case )</button>
+					<br />
+					<br />
+				</div>
+
+				<div className="col-xs-12">
+
 					<button type="button" className="btn btn-primary" onClick={ this.run }>Run All</button>
 					&nbsp;&nbsp;
 					<button type="button" className="btn btn-danger" onClick={ this.resetCaseCount }>Reset</button>
 					<br />
 					<br />
 				</div>
-
 				<SlaveTabs slaves={ this.state.slaves } onSwitchTab={ this._setActiveTab } />
 				<StdoutContainer slave={ this.state.activeSlave } />
 			</div>
