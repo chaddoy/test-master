@@ -114,9 +114,6 @@ var MasterSlaveApp = React.createClass( {
 						dataSelect : result.slice( 0, endCount )
 					} );
 					endCount += interval;
-					if ( clear ) { // cleanup
-						this.state.dataSelect = null;
-					}
 				}.bind( this ), 1000 );
 			}
 		}.bind( this ) );
