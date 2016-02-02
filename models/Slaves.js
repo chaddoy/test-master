@@ -8,7 +8,7 @@ var SlaveModelSchema = new Schema( {
 	'os'             : String,
 	'osVersion'      : String,
 	'browser'        : String,
-	'browserVersion' : String,
+	'browserVersion' : String
 } );
 
 mongoose.models.Slave = mongoose.model( 'Slave', SlaveModelSchema );

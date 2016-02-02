@@ -8,8 +8,6 @@ const server   = new Hapi.Server();
 const mongoose = require( 'mongoose' );
 const config   = require( './config' );
 
-const protractorConfig = require( 'protractor-config' );
-
 mongoose.connect( config.mongodb );
 require( './models/Tests' );
 require( './models/Slaves' );

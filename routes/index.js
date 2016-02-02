@@ -7,15 +7,13 @@ const Test     = mongoose.models.Test;
 const Slave    = mongoose.models.Slave;
 const fs       = require( 'fs' );
 
-const protractorConfig   = require( 'protractor-config' );
-
 // Test Cases
 const testCases = [];
 const logFiles  = [];
 
 const master = require( process.cwd() + '/master' );
 
-glob( process.cwd() + '/testlogs/*', function ( err, files ) {
+glob( process.cwd() + '/test/data/testlogs/*', function ( err, files ) {
 	files.forEach( function ( file ) {
 		let fileName = file.split( '/' );
 		let data = {
@@ -26,7 +24,7 @@ glob( process.cwd() + '/testlogs/*', function ( err, files ) {
 	} );
 } );
 
-glob( process.cwd() + '/observation-public-tests/test/sandbox/converted-jsons/*', function ( err, files ) {
+glob( process.cwd() + '/test/data/observation-public-tests/test/sandbox/converted-jsons/*', function ( err, files ) {
 	files.forEach( function ( file ) {
 		let fileName = file.split( '/' );
 		let data = {
