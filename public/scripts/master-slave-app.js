@@ -233,7 +233,6 @@ var MasterSlaveApp = React.createClass( {
 	'run' : function ( e ) {
 		let textarea = e.target.parentNode.getElementsByTagName( 'textarea' )[ 0 ];
 		if ( textarea.value && this.state.data.length && this.state.slaves.length ) {
-			console.log( textarea );
 			this.currentUser = this.getRandomUser( textarea );
 
 			this.state.slaves.map( ( slave ) => {
@@ -249,7 +248,6 @@ var MasterSlaveApp = React.createClass( {
 		let select    = e.target.parentNode.getElementsByTagName( 'select' )[ 0 ];
 		let selected  = select.options[ select.selectedIndex ].value;
 
-		console.log( textarea );
 		if ( textarea.value && this.state.data.length && this.state.slaves.length ) {
 			this.currentUser = this.getRandomUser( textarea );
 
