@@ -1,7 +1,11 @@
 'use strict';
-var host         = 'localhost';
+var host         = window.location.hostname;
 var socket       = io( 'ws://' + host + ':3401' );
 var moreInterval = 500;
+
+if ( !host ) {
+	host = 'localhost';
+}
 
 var SlaveTabs = React.createClass( {
 	'_handleClick' : function ( e ) {
